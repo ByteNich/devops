@@ -10,6 +10,8 @@ def dif(a, b):
 def mul(a, b):
     return a * b
 
+def m():
+    pass
 
 def div(a, b):
     return a // b
