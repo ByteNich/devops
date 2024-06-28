@@ -1,26 +1,37 @@
-class TodoList:
-    def __init__(self):
-        self.tasks = []
 
-    def add_task(self, task):
-        if not task:
-            raise ValueError("Task cannot be empty")
-        self.tasks.append(task)
-
-    def remove_task(self, task):
-        if task in self.tasks:
-            self.tasks.remove(task)
-        else:
-            raise ValueError("Task not found")
-
-    def get_tasks(self):
-        return self.tasks
+def summ(a, b):
+    return a + b
 
 
-if __name__ == "__main__":
-    todo_list = TodoList()
-    todo_list.add_task("Buy milk")
-    todo_list.add_task("Read a book")
-    print("Current tasks:", todo_list.get_tasks())
-    todo_list.remove_task("Buy milk")
-    print("Current tasks after removal:", todo_list.get_tasks())
+def dif(a, b):
+    return a - b
+
+
+def mul(a, b):
+    return a * b
+
+
+def div(a, b):
+    return a // b
+
+
+def calculator(num1, num2, op):
+    if op == "+":
+        return summ(num1, num2)
+    if op == "-":
+        return dif(num1, num2)
+    if op == "*":
+        return mul(num1, num2)
+    if op == ":":
+        return div(num1, num2)
+    return "Введен некорректный оператор"
+
+print(calculator(5, 7, '+'))
+
+# firstNumber = int(input("Введите первое число: "))
+# secondNumber = int(input("Введите второе число: "))
+# operand = input("Введите оператор: ")
+#
+# answer = calculator(firstNumber, secondNumber, operand)
+#
+# print("Ответ: ", answer)
