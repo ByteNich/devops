@@ -6,3 +6,4 @@ def test_pos_mul():
 
 def test_neg_mul():
     assert mul(-5, 3) == -15
+    
