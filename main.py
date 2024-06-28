@@ -1,38 +1,27 @@
+def sum_of_digits(number: int):
+    print(number)
+    if not isinstance(number, int):
+        raise ValueError
+    number = abs(number)
+    result = 0
+    while number > 0:
+        result += number % 10
+        number //= 10
+    return result
+# hey
 
-def summ(a, b):
-    return a + b
+def is_lucky(number: int):
+    if not isinstance(number, int):
+        raise ValueError
+    number = abs(number)
+    if number < 10:
+        return True
+    head = sum_of_digits(number // 10 ** ((len(str(number)) + 1) // 2))
+    tail = sum_of_digits(number % 10 ** (len(str(number)) // 2))
+    if head == tail:
+        return True
+    return False
 
 
-def dif(a, b):
-    return a - b
-
-
-def mul(a, b):
-    return a * b
-
-
-
-def div(a, b):
-    return a // b
-
-
-def calculator(num1, num2, op):
-    if op == "+":
-        return summ(num1, num2)
-    if op == "-":
-        return dif(num1, num2)
-    if op == "*":
-        return mul(num1, num2)
-    if op == ":":
-        return div(num1, num2)
-    return "Введен некорректный оператор"
-
-print(calculator(5, 7, '+'))
-
-# firstNumber = int(input("Введите первое число: "))
-# secondNumber = int(input("Введите второе число: "))
-# operand = input("Введите оператор: ")
-#
-# answer = calculator(firstNumber, secondNumber, operand)
-#
-# print("Ответ: ", answer)
+print("ok")
+print(sum_of_digits(123))
