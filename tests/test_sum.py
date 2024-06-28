@@ -5,3 +5,4 @@ def test_pos_sum():
 
 def test_neg_sum():
     assert summ(-1, 2) == 1
+    

@@ -5,3 +5,4 @@ def test_pos_dif():
 
 def test_neg_dif():
     assert dif(-5, -2) == -3
+    
